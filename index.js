@@ -122,29 +122,40 @@
 // }
 // utility();
 
-async function helper() {
-    let options = { 
-        method: 'POST',
-        body: JSON.stringify({
-          title: 'Harshal',
-          body: 'stronge',
-          userId: 2002,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
+// async function helper() {
+//     let options = { 
+//         method: 'POST',
+//         body: JSON.stringify({
+//           title: 'Harshal',
+//           body: 'stronge',
+//           userId: 2002,
+//         }),
+//         headers: {
+//           'Content-type': 'application/json; charset=UTF-8',
+//         },
+//     }
+//     let Content = await fetch('https://jsonplaceholder.typicode.com/posts',options);
+//     let respose = Content.json();
+//     return respose;
+// }
+
+// async function utility() {
+//     let ans =await helper();
+//     console.log(ans);
+// }
+
+// utility();
+
+
+function init() {
+    var name = "Mozilla"; // name is a local variable created by init
+    function displayName() {
+      // displayName() is the inner function, that forms the closure
+      console.log(name); // use variable declared in the parent function
     }
-    let Content = await fetch('https://jsonplaceholder.typicode.com/posts',options);
-    let respose = Content.json();
-    return respose;
-}
-
-async function utility() {
-    let ans =await helper();
-    console.log(ans);
-}
-
-utility();
+    displayName();
+  }
+  init();
 
 
 
